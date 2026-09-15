@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillBridge - SIH26134</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SkillBridge
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#programs">Programs</a>
+        </div>
+
+        <button class="login-btn" onclick="login()">
+            Login
+        </button>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Bridge the Gap Between
+                <span>Skills & Industry</span>
+            </h1>
+
+            <p>
+                Discover the skills industries need and find
+                suitable skill development programs to improve
+                your career opportunities.
+            </p>
+
+            <button class="primary-btn" onclick="exploreSkills()">
+                Explore Skills
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="section">
+
+        <h2>Industry Skill Demand</h2>
+
+        <p class="section-description">
+            Understand which skills are currently demanded by
+            different industries.
+        </p>
+
+        <p id="message">
+            Connecting to Java...
+        </p>
+
+        <!-- Skills from Java -->
+
+        <div id="skills-container" class="cards">
+
+        </div>
+
+    </section>
+
+
+    <!-- Jobs Section -->
+
+    <section id="jobs" class="section grey-section">
+
+        <h2>Emerging Job Roles</h2>
+
+        <p class="section-description">
+            Explore job roles and the skills required by industry.
+        </p>
+
+        <!-- Jobs from Java -->
+
+        <div id="jobs-container" class="cards">
+
+        </div>
+
+    </section>
+
+
+    <!-- Programs Section -->
+
+    <section id="programs" class="section">
+
+        <h2>Skill Development Programs</h2>
+
+        <div class="program-box">
+
+            <h3>Find the Right Program</h3>
+
+            <p>
+                Select your current skill and career goal
+                to find suitable training programs.
+            </p>
+
+            <select id="skillSelect">
+
+                <option value="">
+                    Select a skill
+                </option>
+
+                <option value="java">
+                    Java
+                </option>
+
+                <option value="python">
+                    Python
+                </option>
+
+                <option value="sql">
+                    SQL
+                </option>
+
+                <option value="data">
+                    Data Analytics
+                </option>
+
+            </select>
+
+            <button class="primary-btn" onclick="findPrograms()">
+                Find Programs
+            </button>
+
+            <p id="result"></p>
+
+        </div>
+
+
+        <!-- Programs from Java -->
+
+        <div id="programs-container" class="cards">
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            SkillBridge | SIH26134
+        </p>
+
+        <p>
+            Skill Development & Industry Alignment Platform
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
