@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Explorer - SIH26134</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Tech Explorer
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#programs">Programs</a>
+        </div>
+
+        <button class="login-btn" onclick="login()">
+            Login
+        </button>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Bridge the Gap Between
+                <span>Skills & Industry</span>
+            </h1>
+
+            <p>
+                Discover the skills industries need and find
+                suitable skill development programs to improve
+                your career opportunities.
+            </p>
+
+            <button class="primary-btn" onclick="exploreSkills()">
+                Explore Skills
+            </button>
+
+            <!-- Industry Skill Demand Graph -->
+<div class="hero-skill-chart">
+
+    <div class="chart-title">
+        <span>Industry Skill Demand</span>
+        <span class="live-badge">LIVE DATA</span>
+    </div>
+
+    <div id="heroSkillChart">
+
+        <div class="chart-row">
+            <div class="chart-label">
+                <span>Java Full Stack</span>
+                <span class="chart-value">90%</span>
+            </div>
+
+            <div class="chart-track">
+                <div class="chart-bar" style="--skill-width: 90%;"></div>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-label">
+                <span>Python</span>
+                <span class="chart-value">95%</span>
+            </div>
+
+            <div class="chart-track">
+                <div class="chart-bar" style="--skill-width: 95%;"></div>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-label">
+                <span>SQL</span>
+                <span class="chart-value">85%</span>
+            </div>
+
+            <div class="chart-track">
+                <div class="chart-bar" style="--skill-width: 85%;"></div>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-label">
+                <span>Data Analytics</span>
+                <span class="chart-value">90%</span>
+            </div>
+
+            <div class="chart-track">
+                <div class="chart-bar" style="--skill-width: 90%;"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+        <div class="job-comparison">
+
+    <h2>Job Market Comparison</h2>
+
+    <div class="circle-chart">
+
+        <div class="circle-center">
+            <strong>Job</strong>
+            <span>Market</span>
+        </div>
+
+    </div>
+
+    <div class="chart-legend">
+
+        <div class="legend-item">
+            <span class="legend-color skilled-graduate"></span>
+            <div>
+                <strong>Graduates + Skilled</strong>
+                <p>45% of jobs</p>
+            </div>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color skilled-non-graduate"></span>
+            <div>
+                <strong>Non-Graduates + Skilled</strong>
+                <p>30% of jobs</p>
+            </div>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color graduate-basic"></span>
+            <div>
+                <strong>Graduates + Basic Skills</strong>
+                <p>25% of jobs</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+        
+
+        
+
+    </section>
+
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="section">
+
+        <h2>Industry Skill Demand</h2>
+
+        <p class="section-description">
+            Understand which skills are currently demanded by
+            different industries.
+        </p>
+
+        <p id="message">
+            Connecting to Java...
+        </p>
+
+        <!-- Skills from Java -->
+
+        <div id="skills-container" class="cards">
+
+        </div>
+
+    </section>
+
+
+    <!-- Jobs Section -->
+
+    <section id="jobs" class="section grey-section">
+
+        <h2>Emerging Job Roles</h2>
+
+        <p class="section-description">
+            Explore job roles and the skills required by industry.
+        </p>
+
+        <!-- Jobs from Java -->
+
+        <div id="jobs-container" class="cards">
+
+        </div>
+
+    </section>
+
+
+    <!-- Programs Section -->
+
+    <section id="programs" class="section">
+
+        <h2>Skill Development Programs</h2>
+
+        <div class="program-box">
+
+            <h3>Find the Right Program</h3>
+
+            <p>
+                Select your current skill and career goal
+                to find suitable training programs.
+            </p>
+
+            <select id="skillSelect">
+
+                <option value="">
+                    Select a skill
+                </option>
+
+                <option value="java">
+                    Java
+                </option>
+
+                <option value="python">
+                    Python
+                </option>
+
+                <option value="sql">
+                    SQL
+                </option>
+
+                <option value="data">
+                    Data Analytics
+                </option>
+
+            </select>
+
+            <button class="primary-btn" onclick="findPrograms()">
+                Find Programs
+            </button>
+
+            <p id="result"></p>
+
+        </div>
+
+
+        <!-- Programs from Java -->
+
+        <div id="programs-container" class="cards">
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            SkillBridge | SIH26134
+        </p>
+
+        <p>
+            Skill Development & Industry Alignment Platform
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
