@@ -1,225 +1,322 @@
-async function connectToJava() {
+// ===============================
+// EXPLORE SKILLS
+// ===============================
 
-    try {
-
-        const response = await fetch(
-            "http://localhost:8080/api/hello"
-        );
-
-        const data = await response.text();
-        //show java responce on webpage
-        document.getElementById("message").innerText = data;
-        console.log("java says:"+data);
-
-        // show message if meesage element is exist
-        const message = document.getElementById("message");
-        if(message){
-            message.innerText = data;
-
-        }
-
-
-    } catch (error) {
-        
-        console.log("Error connecting to Java:",error);
-
-    }
+function exploreSkills() {
+    document.getElementById("skills").scrollIntoView({
+        behavior: "smooth"
+    });
 }
 
-//GET SKILLS FROM JAVA
 
-async function loadSkills(){
-    try{
-        const response = await fetch(
-            "http://localhost:8080/api/skills"
-        );
-        const skills = await response.json();
-        console.log("Skills from Java:",skills);
-    
-    const container = document.getElementById("skills-container");
-    if(!container){
-        console.log("skills container not found");
+// ===============================
+// EXPLORE JOBS
+// ===============================
+
+function exploreJobs() {
+    document.getElementById("jobs").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+// ===============================
+// LOGIN
+// ===============================
+
+function login() {
+    alert("Login feature will be added soon.");
+}
+
+
+// ===============================
+// ANIMATE HERO GRAPH
+// ===============================
+
+function animateChart() {
+
+    const bars = document.querySelectorAll(".chart-bar");
+
+    bars.forEach(function(bar) {
+
+        const width = bar.getAttribute("data-width");
+
+        setTimeout(function() {
+            bar.style.width = width;
+        }, 300);
+
+    });
+}
+
+
+// ===============================
+// LOAD SKILLS
+// ===============================
+
+function loadSkills() {
+
+    fetch("http://localhost:8080/api/skills")
+
+        .then(function(response) {
+
+            if (!response.ok) {
+                throw new Error("Skills API error");
+            }
+
+            return response.json();
+        })
+
+        .then(function(data) {
+
+            const container =
+                document.getElementById("skills-container");
+
+            const message =
+                document.getElementById("message");
+
+            container.innerHTML = "";
+
+            data.forEach(function(skill) {
+
+                const card =
+                    document.createElement("div");
+
+                card.className = "data-card";
+
+                card.innerHTML = `
+                    <h3>${skill.name}</h3>
+                    <p>Demand: ${skill.demand}</p>
+                    <span class="tag">
+                        Level: ${skill.level}
+                    </span>
+                `;
+
+                container.appendChild(card);
+
+            });
+
+            message.innerText =
+                "Industry skills from Java backend";
+
+        })
+
+        .catch(function(error) {
+
+            console.log(error);
+
+            document.getElementById("message").innerText =
+                "Java backend is not connected.";
+
+        });
+}
+
+
+// ===============================
+// LOAD JOBS
+// ===============================
+
+function loadJobs() {
+
+    fetch("http://localhost:8080/api/jobs")
+
+        .then(function(response) {
+
+            if (!response.ok) {
+                throw new Error("Jobs API error");
+            }
+
+            return response.json();
+        })
+
+        .then(function(data) {
+
+            const container =
+                document.getElementById("jobs-container");
+
+            container.innerHTML = "";
+
+            data.forEach(function(job) {
+
+                const card =
+                    document.createElement("div");
+
+                card.className = "data-card";
+
+                card.innerHTML = `
+                    <h3>${job.title}</h3>
+                    <p>Required skills:</p>
+                    <span class="tag">
+                        ${job.skills}
+                    </span>
+                `;
+
+                container.appendChild(card);
+
+            });
+
+        })
+
+        .catch(function(error) {
+
+            console.log(error);
+
+            document.getElementById("jobs-container").innerHTML = `
+                <div class="data-card">
+                    <h3>Java backend not connected</h3>
+                    <p>
+                        Start your Java server to load jobs.
+                    </p>
+                </div>
+            `;
+
+        });
+}
+
+
+// ===============================
+// LOAD PROGRAMS
+// ===============================
+
+function loadPrograms() {
+
+    fetch("http://localhost:8080/api/programs")
+
+        .then(function(response) {
+
+            if (!response.ok) {
+                throw new Error("Programs API error");
+            }
+
+            return response.json();
+        })
+
+        .then(function(data) {
+
+            displayPrograms(data);
+
+        })
+
+        .catch(function(error) {
+
+            console.log(error);
+
+            document.getElementById("programs-container").innerHTML = `
+                <div class="data-card">
+                    <h3>Java backend not connected</h3>
+                    <p>
+                        Start your Java server to load programs.
+                    </p>
+                </div>
+            `;
+
+        });
+}
+
+
+// ===============================
+// DISPLAY PROGRAMS
+// ===============================
+
+function displayPrograms(programs) {
+
+    const container =
+        document.getElementById("programs-container");
+
+    container.innerHTML = "";
+
+    programs.forEach(function(program) {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "data-card";
+
+        card.innerHTML = `
+            <h3>${program.name}</h3>
+
+            <p>
+                Skill: ${program.skill}
+            </p>
+
+            <span class="tag">
+                ${program.duration}
+            </span>
+        `;
+
+        container.appendChild(card);
+
+    });
+}
+
+
+// ===============================
+// FIND PROGRAMS
+// ===============================
+
+function findPrograms() {
+
+    const selectedSkill =
+        document.getElementById("skillSelect").value;
+
+    const result =
+        document.getElementById("result");
+
+    if (selectedSkill === "") {
+
+        result.innerText =
+            "Please select a skill.";
+
         return;
     }
 
-    //clear old content
+    fetch("http://localhost:8080/api/programs")
 
-    container.innerHTML = "";
-    // create cards
+        .then(function(response) {
+            return response.json();
+        })
 
-    skills.forEach(function(skill){
-        const card = document.createElement("div");
-        card.className = "skill-card";
-        card.innerHTML = ` <h3>${skill.name}</h3>
+        .then(function(programs) {
 
-                <p>
-                    Industry Demand:
-                    <strong>${skill.demand}%</strong>
-                </p>
+            const matchingPrograms =
+                programs.filter(function(program) {
 
-                <p>
-                    ${skill.level}
-                </p>`;
+                    return program.skill
+                        .toLowerCase()
+                        .includes(selectedSkill.toLowerCase());
 
-                container.appendChild(card);
-    })
-    
-}catch(error){
-        console.log("error form java:",error);
-    }
-} 
+                });
 
-//GET JOBS FROM JAVA
-async function loadJobs(){
-    try{
-        const response = await fetch(
-            "http://localhost:8080/api/jobs"
-        );
-        const jobs = await response.json();
-        console.log("Jobs from Java:",jobs);
+            displayPrograms(matchingPrograms);
 
-        const container = document.getElementById("jobs-container");
+            result.innerText =
+                matchingPrograms.length +
+                " program(s) found.";
 
-        if(!container){
-            console.log("jobs-container not found");
-            return;
-        }
+        })
 
-        container.innerHTML ="";
-        jobs.forEach(function(job){
-            const card = document.createElement("div");
-            card.className = "job-card";
-            card.innerHTML =  `<h3>${job.title}</h3>
+        .catch(function(error) {
 
-                <p>
-                Required Skills
-                    
-                    <strong>${job.title}%</strong>
-                </p>
+            console.log(error);
 
-                <p>
-                    ${job.skills}
-                </p>`;
-                container.appendChild(card);
+            result.innerText =
+                "Please start the Java server.";
+
         });
-    }catch(error){
-        console.log("error form java:",error);
-    }
-}
-
-// GET PROGRAMS FROM JAVA
-
-async function loadPrograms(){
-    try{
-        const response = await fetch(
-            "http://localhost:8080/api/programs"
-        );
-        const programs = await response.json();
-        console.log("Programs from java:",programs);
-
-        const container = document.getElementById("programs-container");
-        if(!container){
-            console.log("programs-container not found");
-            return;
-        }
-        container.innerHTML = "";
-        programs.forEach(function(program){
-        const card = document.createElement("div");
-        card.className = "program-card";
-        card.innerHTML = ` <h3>${program.name}</h3>
-
-                <p>
-                    Skill:
-                    <strong>${program.skill}%</strong>
-                </p>
-
-                <p>
-                Duration:
-                    ${program.duration}
-                </p>`;
-                container.appendChild(card);
-        });
-
-    } catch(error){
-        console.log("error form java",error);
-    }
-        
 }
 
 
+// ===============================
+// PAGE LOAD
+// ===============================
 
-// =====================================
-// JOB STATISTICS CIRCLE ANIMATION
-// =====================================
+document.addEventListener("DOMContentLoaded", function() {
 
-function animateJobStatistics() {
+    animateChart();
 
-    const percentages =
-        document.querySelectorAll(".percentage");
+    loadSkills();
 
+    loadJobs();
 
-    percentages.forEach(function(element) {
+    loadPrograms();
 
-        const target =
-            Number(element.getAttribute("data-value"));
-
-        let current = 0;
-
-
-        const circle =
-            element.closest(".circle");
-
-
-        const interval =
-            setInterval(function() {
-
-                current++;
-
-
-                // Update percentage text
-
-                element.innerText =
-                    current + "%";
-
-
-                // Convert percentage to degrees
-
-                const degrees =
-                    current * 3.6;
-
-
-                // Update circle
-
-                circle.style.background =
-                    `conic-gradient(
-                        #4f46e5 ${degrees}deg,
-                        #e5e7eb ${degrees}deg
-                    )`;
-
-
-                // Stop animation
-
-                if (current >= target) {
-
-                    clearInterval(interval);
-
-                }
-
-            }, 20);
-
-    });
-
-}
-
-
-// Start circle animation
-
-animateJobStatistics();
-
-
-//start everthing
-
-connectToJava();
-loadSkills();
-loadJobs();
-loadPrograms();
+});
