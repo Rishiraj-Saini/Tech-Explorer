@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tech Explorer - SIH26134</title>
+    <title>Tech Explorer- SIH26134</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
-
+    <!-- NAVBAR -->
     <nav class="navbar">
 
         <div class="logo">
+            <span class="logo-icon">◆</span>
             Tech Explorer
         </div>
 
@@ -34,193 +34,422 @@
     </nav>
 
 
-    <!-- Hero Section -->
-
+    <!-- HERO -->
     <section id="home" class="hero">
 
-        <div class="hero-text">
+        <div class="hero-container">
 
-            <h1>
-                Bridge the Gap Between
-                <span>Skills & Industry</span>
-            </h1>
+            <!-- LEFT SIDE -->
+            <div class="hero-text">
+
+                <div class="hero-badge">
+                    🚀 Industry • Skills • Careers
+                </div>
+
+                <h1>
+                    Bridge the Gap Between
+                    <span>Skills & Industry</span>
+                </h1>
+
+                <p>
+                    Discover the skills industries need,
+                    explore career opportunities and find
+                    suitable skill development programs
+                    to build your future.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick="exploreSkills()">
+                        Explore Skills →
+                    </button>
+
+                    <button class="secondary-btn" onclick="exploreJobs()">
+                        Explore Jobs
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="hero-dashboard">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-header">
+
+                        <div>
+                            <span class="small-label">
+                                MARKET INSIGHTS
+                            </span>
+
+                            <h3>
+                                Industry Skill Demand
+                            </h3>
+                        </div>
+
+                        <span class="live-badge">
+                            ● LIVE
+                        </span>
+
+                    </div>
+
+
+                    <!-- GRAPH -->
+                    <div class="chart">
+
+                        <div class="chart-row">
+
+                            <div class="chart-label">
+                                <span>Python</span>
+                                <strong>95%</strong>
+                            </div>
+
+                            <div class="chart-track">
+                                <div class="chart-bar" data-width="95%"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="chart-row">
+
+                            <div class="chart-label">
+                                <span>Java</span>
+                                <strong>90%</strong>
+                            </div>
+
+                            <div class="chart-track">
+                                <div class="chart-bar" data-width="90%"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="chart-row">
+
+                            <div class="chart-label">
+                                <span>Data Analytics</span>
+                                <strong>85%</strong>
+                            </div>
+
+                            <div class="chart-track">
+                                <div class="chart-bar" data-width="85%"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="chart-row">
+
+                            <div class="chart-label">
+                                <span>SQL</span>
+                                <strong>80%</strong>
+                            </div>
+
+                            <div class="chart-track">
+                                <div class="chart-bar" data-width="80%"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-footer">
+                        <span>↑ Skill Demand</span>
+                        <span>Tech Explorer</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats-section">
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+
+                <div>
+                    <strong>4+</strong>
+                    <span>In-Demand Skills</span>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">💼</div>
+
+                <div>
+                    <strong>3+</strong>
+                    <span>Job Roles</span>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">🎓</div>
+
+                <div>
+                    <strong>4+</strong>
+                    <span>Learning Programs</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                SIMPLE PROCESS
+            </span>
+
+            <h2>
+                How Tech Explorer Works
+            </h2>
 
             <p>
-                Discover the skills industries need and find
-                suitable skill development programs to improve
-                your career opportunities.
+                Discover skills, explore jobs and find
+                suitable learning opportunities.
             </p>
 
-            <button class="primary-btn" onclick="exploreSkills()">
-                Explore Skills
-            </button>
-
-            <!-- Industry Skill Demand Graph -->
-<div class="hero-skill-chart">
-
-    <div class="chart-title">
-        <span>Industry Skill Demand</span>
-        <span class="live-badge">LIVE DATA</span>
-    </div>
-
-    <div id="heroSkillChart">
-
-        <div class="chart-row">
-            <div class="chart-label">
-                <span>Java Full Stack</span>
-                <span class="chart-value">90%</span>
-            </div>
-
-            <div class="chart-track">
-                <div class="chart-bar" style="--skill-width: 90%;"></div>
-            </div>
         </div>
 
-        <div class="chart-row">
-            <div class="chart-label">
-                <span>Python</span>
-                <span class="chart-value">95%</span>
+
+        <div class="steps-container">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="step-icon">🔍</div>
+
+                <h3>Discover Skills</h3>
+
+                <p>
+                    Identify skills demanded by industries.
+                </p>
             </div>
 
-            <div class="chart-track">
-                <div class="chart-bar" style="--skill-width: 95%;"></div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="step-icon">💼</div>
+
+                <h3>Explore Jobs</h3>
+
+                <p>
+                    Explore jobs and their required skills.
+                </p>
             </div>
+
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="step-icon">🎓</div>
+
+                <h3>Find Programs</h3>
+
+                <p>
+                    Find programs to develop your skills.
+                </p>
+            </div>
+
+
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="step-icon">🚀</div>
+
+                <h3>Build Your Future</h3>
+
+                <p>
+                    Become more prepared for industry.
+                </p>
+            </div>
+
         </div>
-
-        <div class="chart-row">
-            <div class="chart-label">
-                <span>SQL</span>
-                <span class="chart-value">85%</span>
-            </div>
-
-            <div class="chart-track">
-                <div class="chart-bar" style="--skill-width: 85%;"></div>
-            </div>
-        </div>
-
-        <div class="chart-row">
-            <div class="chart-label">
-                <span>Data Analytics</span>
-                <span class="chart-value">90%</span>
-            </div>
-
-            <div class="chart-track">
-                <div class="chart-bar" style="--skill-width: 90%;"></div>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-        </div>
-
-        <div class="job-comparison">
-
-    <h2>Job Market Comparison</h2>
-
-    <div class="circle-chart">
-
-        <div class="circle-center">
-            <strong>Job</strong>
-            <span>Market</span>
-        </div>
-
-    </div>
-
-    <div class="chart-legend">
-
-        <div class="legend-item">
-            <span class="legend-color skilled-graduate"></span>
-            <div>
-                <strong>Graduates + Skilled</strong>
-                <p>45% of jobs</p>
-            </div>
-        </div>
-
-        <div class="legend-item">
-            <span class="legend-color skilled-non-graduate"></span>
-            <div>
-                <strong>Non-Graduates + Skilled</strong>
-                <p>30% of jobs</p>
-            </div>
-        </div>
-
-        <div class="legend-item">
-            <span class="legend-color graduate-basic"></span>
-            <div>
-                <strong>Graduates + Basic Skills</strong>
-                <p>25% of jobs</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-        
-
-        
 
     </section>
 
 
-    <!-- Skills Section -->
+    <!-- COMPARISON -->
+    <section class="comparison-section">
 
+        <div class="comparison-container">
+
+            <div class="comparison-text">
+
+                <span class="section-tag">
+                    JOB MARKET INSIGHTS
+                </span>
+
+                <h2>
+                    Skills Can Open
+                    <span>More Opportunities</span>
+                </h2>
+
+                <p>
+                    Tech Explorer helps users understand the
+                    relationship between education, skills
+                    and employment opportunities.
+                </p>
+
+                <div class="comparison-points">
+
+                    <div class="point">
+                        <span class="point-dot purple"></span>
+
+                        <div>
+                            <strong>Graduates + Skilled</strong>
+                            <p>45% — example data</p>
+                        </div>
+                    </div>
+
+
+                    <div class="point">
+                        <span class="point-dot green"></span>
+
+                        <div>
+                            <strong>Non-Graduates + Skilled</strong>
+                            <p>30% — example data</p>
+                        </div>
+                    </div>
+
+
+                    <div class="point">
+                        <span class="point-dot orange"></span>
+
+                        <div>
+                            <strong>Graduates + Basic Skills</strong>
+                            <p>25% — example data</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="comparison-chart">
+
+                <div class="circle-chart">
+
+                    <div class="circle-center">
+                        <strong>100%</strong>
+                        <span>Comparison</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Illustrative comparison
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
     <section id="skills" class="section">
 
-        <h2>Industry Skill Demand</h2>
+        <div class="section-heading">
 
-        <p class="section-description">
-            Understand which skills are currently demanded by
-            different industries.
-        </p>
+            <span class="section-tag">
+                EXPLORE
+            </span>
+
+            <h2>
+                Industry Skill Demand
+            </h2>
+
+            <p>
+                Skills currently included in our demo dataset.
+            </p>
+
+        </div>
 
         <p id="message">
-            Connecting to Java...
+            Loading skills...
         </p>
 
-        <!-- Skills from Java -->
-
-        <div id="skills-container" class="cards">
-
-        </div>
+        <div id="skills-container" class="cards"></div>
 
     </section>
 
 
-    <!-- Jobs Section -->
-
+    <!-- JOBS -->
     <section id="jobs" class="section grey-section">
 
-        <h2>Emerging Job Roles</h2>
+        <div class="section-heading">
 
-        <p class="section-description">
-            Explore job roles and the skills required by industry.
-        </p>
+            <span class="section-tag">
+                CAREERS
+            </span>
 
-        <!-- Jobs from Java -->
+            <h2>
+                Emerging Job Roles
+            </h2>
 
-        <div id="jobs-container" class="cards">
+            <p>
+                Explore job roles and required skills.
+            </p>
 
         </div>
+
+        <div id="jobs-container" class="cards"></div>
 
     </section>
 
 
-    <!-- Programs Section -->
-
+    <!-- PROGRAMS -->
     <section id="programs" class="section">
 
-        <h2>Skill Development Programs</h2>
+        <div class="section-heading">
+
+            <span class="section-tag">
+                LEARNING
+            </span>
+
+            <h2>
+                Skill Development Programs
+            </h2>
+
+            <p>
+                Find programs based on your selected skill.
+            </p>
+
+        </div>
+
 
         <div class="program-box">
 
-            <h3>Find the Right Program</h3>
+            <div class="program-icon">
+                🎯
+            </div>
+
+            <h3>
+                Find the Right Program
+            </h3>
 
             <p>
-                Select your current skill and career goal
-                to find suitable training programs.
+                Select a skill to discover suitable programs.
             </p>
 
             <select id="skillSelect">
@@ -247,8 +476,12 @@
 
             </select>
 
-            <button class="primary-btn" onclick="findPrograms()">
-                Find Programs
+
+            <button class="primary-btn full-btn"
+                    onclick="findPrograms()">
+
+                Find Programs →
+
             </button>
 
             <p id="result"></p>
@@ -256,25 +489,50 @@
         </div>
 
 
-        <!-- Programs from Java -->
-
-        <div id="programs-container" class="cards">
-
-        </div>
+        <div id="programs-container" class="cards"></div>
 
     </section>
 
 
-    <!-- Footer -->
+    <!-- CTA -->
+    <section class="cta-section">
 
-    <footer>
+        <span class="section-tag">
+            START YOUR JOURNEY
+        </span>
+
+        <h2>
+            Ready to Bridge the Gap?
+        </h2>
 
         <p>
-            SkillBridge | SIH26134
+            Explore industry skills and discover
+            your next career opportunity.
         </p>
+
+        <button class="primary-btn"
+                onclick="exploreSkills()">
+
+            Explore Skills →
+
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            ◆ Tech Explorer
+        </div>
 
         <p>
             Skill Development & Industry Alignment Platform
+        </p>
+
+        <p class="copyright">
+            • Mukund Dhamija Tech Explorer
         </p>
 
     </footer>
@@ -283,5 +541,8 @@
     <script src="script.js"></script>
 
 </body>
+
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 
 </html>
