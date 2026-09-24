@@ -330,20 +330,6 @@ function findPrograms() {
     displayPrograms(filteredPrograms);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =====================================================
    RICH DETAIL CONTENT
    Add a new entry here (key = normalized name) and the
@@ -393,13 +379,14 @@ const JOB_DETAILS = {
             { label: "Full Stack Developer Roadmap", url: "https://roadmap.sh/full-stack" },
             { label: "MDN Web Docs (HTML/CSS/JS)", url: "https://developer.mozilla.org" },
             { label: "Spring Boot official guides", url: "https://spring.io/projects/spring-boot" },
-            { label: "NPTEL programming courses", url: "https://nptel.ac.in" }
+            { label: "NPTEL programming courses", url: "https://nptel.ac.in" },
+            { label: "COMPUTER SCIENCE WITH PYTHON book by Sumita Arora (for Basics of SQL)", url:"https://www.ssgopalganj.in/online/Class%20XII/Comp/Computer%20science%20PYTHON%20book%20pdf%20for%20class%2012.pdf" },
         ],
         youtube: [
-            { label: "Java Full Stack Development course", url: "https://www.youtube.com/results?search_query=java+full+stack+development+full+course" },
-            { label: "Spring Boot tutorial for beginners", url: "https://www.youtube.com/results?search_query=spring+boot+tutorial+for+beginners" },
-            { label: "HTML CSS JavaScript full course", url: "https://www.youtube.com/results?search_query=html+css+javascript+full+course" },
-            { label: "SQL full course", url: "https://www.youtube.com/results?search_query=sql+full+course" }
+            { label: "Java Full Stack Development course", url: "https://youtube.com/playlist?list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5&si=gCUzN99WNEG1hfyA" },
+            { label: "Spring Boot tutorial for beginners", url: "https://youtube.com/playlist?list=PLsyeobzWxl7qbKoSgR5ub6jolI8-ocxCF&si=yu2ECcWpZWIf1zy4" },
+            { label: "HTML CSS JavaScript full course", url: "https://youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&si=WEIKH6kyCpnZ_4Ji" },
+            { label: "SQL full course", url: "https://youtu.be/7S_tz1z_5bA?si=-JKbX7P2ZwfReP1A" }
         ]
     },
 
@@ -424,16 +411,20 @@ const JOB_DETAILS = {
             { title: "Portfolio projects", text: "Build 2\u20133 back-end projects (e.g. URL shortener, expense API) and host them." }
         ],
         research: [
+            { label: "Introduction with Python programming (harvard course)", url: "https://pll.harvard.edu/course/cs50s-introduction-programming-python" },
             { label: "Official Python documentation", url: "https://docs.python.org/3/" },
             { label: "Python Developer Roadmap", url: "https://roadmap.sh/python" },
             { label: "FastAPI official docs", url: "https://fastapi.tiangolo.com" },
-            { label: "Real Python tutorials", url: "https://realpython.com" }
+            { label: "Real Python tutorials", url: "https://realpython.com" },
+            { label: "COMPUTER SCIENCE WITH PYTHON book by Sumita Arora (for Basics of SQL)", url:"https://www.ssgopalganj.in/online/Class%20XII/Comp/Computer%20science%20PYTHON%20book%20pdf%20for%20class%2012.pdf" },
         ],
         youtube: [
+            { label: "Python fundamentals", url: "https://www.youtube.com/watch?v=rfscVS0vtbw" },
             { label: "Python full course for beginners", url: "https://www.youtube.com/results?search_query=python+full+course+for+beginners" },
             { label: "FastAPI tutorial", url: "https://www.youtube.com/results?search_query=fastapi+tutorial" },
-            { label: "SQL for Python developers", url: "https://www.youtube.com/results?search_query=sql+course+for+python+developers" },
-            { label: "Python projects with source code", url: "https://www.youtube.com/results?search_query=python+projects+with+source+code" }
+            { label: "SQL full course with python", url: "https://youtu.be/7S_tz1z_5bA?si=-JKbX7P2ZwfReP1A" },
+            { label: "Python projects with source code", url: "https://www.youtube.com/results?search_query=python+projects+with+source+code" },
+            { label: "Fast API", url: "https://youtu.be/Lu8lXXlstvM?si=cNvGv_5MY_6hrCpF" }
         ]
     },
 
@@ -459,6 +450,7 @@ const JOB_DETAILS = {
         ],
         research: [
             { label: "Data Analyst Roadmap", url: "https://roadmap.sh/data-analyst" },
+            { label: "Data science with python (Harvard course)", url: "https://pll.harvard.edu/course/introduction-data-science-python/2026-05" },
             { label: "Kaggle Learn (free micro-courses)", url: "https://www.kaggle.com/learn" },
             { label: "SQLBolt (interactive SQL)", url: "https://sqlbolt.com" },
             { label: "NPTEL data analytics courses", url: "https://nptel.ac.in" }
@@ -492,6 +484,7 @@ const JOB_DETAILS = {
             { title: "Certify & specialize", text: "CompTIA Security+ or CEH, then choose a track: SOC analyst, penetration testing, or security engineering." }
         ],
         research: [
+            { label: "Introduction to Cybersecurity (HARVARD COURSE)", url: "https://pll.harvard.edu/course/cs50s-introduction-cybersecurity" },
             { label: "Cyber Security Roadmap", url: "https://roadmap.sh/cybersecurity" },
             { label: "OWASP (Top 10 & standards)", url: "https://owasp.org" },
             { label: "TryHackMe (hands-on labs)", url: "https://tryhackme.com" },
@@ -499,11 +492,13 @@ const JOB_DETAILS = {
             { label: "CERT-In (Govt. of India)", url: "https://www.cert-in.org.in" }
         ],
         youtube: [
+            { label: "Cyber-security channel :- Network chuck", url: "https://youtube.com/@networkchuck?si=U9s0C6HhjJt6mbL7" },
             { label: "Cyber Security full course", url: "https://www.youtube.com/results?search_query=cyber+security+full+course+for+beginners" },
-            { label: "Complete networking course", url: "https://www.youtube.com/results?search_query=complete+computer+networking+course" },
-            { label: "OWASP Top 10 explained", url: "https://www.youtube.com/results?search_query=owasp+top+10+explained" },
-            { label: "Linux for ethical hackers", url: "https://www.youtube.com/results?search_query=linux+for+ethical+hackers" },
-            { label: "TryHackMe room walkthroughs", url: "https://www.youtube.com/results?search_query=tryhackme+walkthrough" }
+            { label: "Complete networking course ", url: "https://youtu.be/fQbBPa0ADvs?si=bn6STQTE8KZ3LHMY" },
+            { label: "Linux and O.S. for ethical hackers", url: "https://youtu.be/1hvVcEhcbLM?si=2FeEU1PjkzWPO6Qe" },
+            { label: "OWASP Top 10 explained", url: "https://www.youtube.com/watch?v=Jzr0Jdnq_EI" },
+            { label: "Complete Ethical hacking course", url: "https://youtube.com/playlist?list=PLIhvC56v63IIJZRa3lzK6IeBQOH_VFjUQ&si=iBeza2hWavgiGu7g" },
+         
         ]
     },
 
@@ -531,13 +526,16 @@ const JOB_DETAILS = {
             { label: "AI / Data Scientist Roadmap", url: "https://roadmap.sh/ai-data-scientist" },
             { label: "Kaggle Learn & competitions", url: "https://www.kaggle.com/learn" },
             { label: "Hugging Face courses (LLMs)", url: "https://huggingface.co/learn" },
+            { label: "AI / ML with python (INTRODUCTION)-(Harvard course)", url: "https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python" },
+            { label: "AI / ML with python (Harvard course) ", url: "https://pll.harvard.edu/course/machine-learning-and-ai-python1" },
             { label: "Machine Learning Specialization (Andrew Ng)", url: "https://www.coursera.org/specializations/machine-learning-introduction" }
         ],
         youtube: [
-            { label: "Machine Learning full course", url: "https://www.youtube.com/results?search_query=machine+learning+full+course" },
-            { label: "LLMs and Generative AI course", url: "https://www.youtube.com/results?search_query=large+language+models+course" },
-            { label: "Prompt engineering tutorial", url: "https://www.youtube.com/results?search_query=prompt+engineering+tutorial" },
-            { label: "AI projects with Python", url: "https://www.youtube.com/results?search_query=ai+projects+with+python+source+code" }
+            { label: "Machine Learning full course", url: "https://youtu.be/i_LwzRVP7bg?si=DmjCxe7yibllA_w2" },
+            { label: "LLMs and Generative AI course", url: "https://www.youtube.com/watch?v=d4yCWBGFCEs" },
+            { label: "Prompt engineering tutorial", url: "https://youtube.com/playlist?list=PLYio3GBcDKsPP2_zuxEp8eCulgFjI5a3g&si=d8_dgWVSbyPdOsmK" },
+            { label: "AI projects with Python", url: "https://youtu.be/XZdY15sHUa8?si=4q3dDKE4Xr0m_Odl" },
+            { label: "ML in python", url: "https://youtu.be/hDKCxebp88A?si=FNn282GNz71DGQj4" },
         ]
     },
 
